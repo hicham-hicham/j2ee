@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Hello from Facelets monsieur
+        #{product.title}
+        <ul>
+    <ui:repeat value="#{product.pp}" var="p">
+        <li>
+<!--            <h:h1 value="#{p.title}" outcome="p">
+                <f:param name="id" value="#{book.id}" />
+            </H:h1>-->
+          title:  #{p.title}
+          <br></br> 
+          description  #{p.description}
+          <br></br> 
+          price  #{p.price}
+          <br></br> 
+          <h:graphicImage p:src="#{p.image}" alt=""/>
+        </li>
+    </ui:repeat>
+</ul>
+    </h:body>
+</html>
+
